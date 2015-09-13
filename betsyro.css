@@ -1,0 +1,123 @@
+html {
+	background-image: url("/images/congruent_outline.png");
+    background-repeat: repeat;
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+    width:100%;
+}
+
+#backgroundImage {
+	position: relative; 
+	left: 0; 
+    top: 60px;
+    width: 100%;
+    min-height: 400px;
+}
+
+#backgroundImage img{
+  display:none;
+}
+
+#backgroundImage img.active{
+  display:block;
+}
+
+#imageToDisplay {
+    width: 100%;
+}
+
+#footer {
+	position: relative;
+	bottom: -20px;
+    color:#457EFF;
+    text-align:center;
+    padding:0px;
+    width:100%;
+    height: 55px;
+    font-size: 22px;
+    background-color: #FFFFFF;
+}
+
+#clientiframe {
+/*	position: absolute;
+	top: 100px;
+	text-align: center;
+	display: inline-block;
+	margin-left: 30%;
+    margin-right: 20%;
+	min-width: 500px;
+	max-width: 50%;
+	min-height: 400px;
+	max-height: 50%;
+	z-index: 1;*/
+}
+#abouttext {
+	position: absolute;
+	top: 130px;
+	text-align: center;
+	display: inline-block;
+	margin-left: 30%;
+    margin-right: 20%;
+	min-width: 500px;
+	max-width: 50%;
+	min-height: 400px;
+	max-height: 50%;
+	z-index: 1;
+	color:#457EFF;
+}
+
+#clientarea {
+	position: absolute;
+	top: 130px;
+	text-align: center;
+	display: inline-block;
+	margin-left: 30%;
+    margin-right: 20%;
+	min-width: 500px;
+	max-width: 50%;
+	min-height: 400px;
+	max-height: 50%;
+	z-index: 1;
+}
+
+#showhidechat {
+	text-align: center;
+	display: inline-block;
+	width: 200px;
+	height: 50px;
+}
+
+#holder {
+	position: absolute;
+	top: 80px;
+	left:0;
+	right: 0;
+	text-align: center;
+	display: inline-block;
+	color: #FFFFFF;
+	height: 40px;
+	font-size: 25px;
+}
+
+.wrapper
+{
+    position: relative;
+    display: inline-block; 
+    z-index: 0; 
+}
+
+.overlay
+{
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(50, 50, 50, 0.5);
+    z-index: 0;
+}
