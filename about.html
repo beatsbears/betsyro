@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+	<head> 
+		<title> betsyro. </title>
+		<link href="betsyro.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.light_blue-blue.min.css" /> 
+		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>  
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+		<script>
+		$(document).ready(function(){
+		    $("#showhidechat").click(function(){
+		        $("#clientiframe").toggle();
+		        $("#showhidechat").toggle();
+		        $("#holder").fadeOut()
+		    });
+		});
+		</script>
+		<script type="text/javascript">
+			//<![CDATA[
+	window.onload=function(){
+	function doWithInterval(id, sentence)
+	{
+	    var f;
+	    f= function(i){
+	        document.getElementById(id).innerHTML+=sentence[i];
+	        if(i+1==sentence.length)
+	           return;
+	        window.setTimeout(function(){f(i+1);},100);
+	    }
+	    f(0);
+	}
+
+	doWithInterval('holder','Welcome to betsyro, your guide to getting involved in Portland');
+	}//]]> 
+
+		</script>
+		<script>
+    function swapImages(){
+      var $active = $('#backgroundImage .active');
+      var $next = ($('#backgroundImage .active').next().length > 0) ? $('#backgroundImage .active').next() : $('#backgroundImage img:first');
+      $active.fadeOut(function(){
+      $active.removeClass('active');
+      $next.fadeIn().addClass('active');
+      });
+    }
+
+    $(document).ready(function(){
+      // Run our swapImages() function every 5secs
+      setInterval('swapImages()', 10000);
+    });
+  </script>
+	</head>
+	<body>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header" style="background-color:#FFFFFF;">
+    <div class="mdl-layout__header-row" style="background-color:#FFFFFF;">
+      <!-- Title -->
+      <span class="mdl-layout-title">betsyro.</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer" style="background-color:black;"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title"style="font-size: 24px;">betsyro.</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link"href="/"> Home </a>
+      <br/>
+      <a class="mdl-navigation__link"href="https://www.portlandlibrary.com/"> Portland Public Library</a>
+      <a class="mdl-navigation__link" href="http://townhallstreams.com/locations/portland-me"> Portland Meeting Streams </a>
+      <br/>
+      <a class="mdl-navigation__link" href="/">  Chat Archive </a>
+      <br/>
+       </nav>
+  </div>
+</div>
+<div class="wrapper">
+</div>
+<div id="abouttext">
+<p> This is where we describe more details..... </p>
+</div>
+		<div id="footer">
+            <center>
+            <p style="font-size:14px;"> Civic Hackathon &copy; 2015</p>
+            </center>
+            </div>
+	</body>
+</html>
