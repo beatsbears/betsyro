@@ -8,5 +8,5 @@ To install on GNU/Linux and Mac OS X
 3. Decompress the PircBot file
 4. Copy the betsyro.java file to the decompressed PircBot directory
 5. Copy the betsyroMain.java file to the decompressed PircBot directory
-6. Run ./compile-betsyro.sh
-7. Run ./run-betsyro.sh
+6. From the PircBot directory run ./compile-betsyro.sh
+7. From the PircBot directory Run ./run-betsyro.sh
