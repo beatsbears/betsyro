@@ -1,7 +1,7 @@
 # betsyro
 A software solution for online civil discourse and civic engagement.
 
-To Install on GNU/Linux and Mac OS X
+To install on GNU/Linux and Mac OS X
 
 1. Install the lastest Java SDK
 2. Download PircBot: http://www.jibble.org/files/pircbot-1.5.0.zip
