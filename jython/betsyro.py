@@ -1,3 +1,26 @@
+# Betsyro is a software solution for online civil discourse and civic 
+# engagement. It aims to empower those that are unable to be physically present
+# at a political venue or otherwise participate in the democratic process.
+
+# Copyright (C) 2015  Scott C. MacCallum
+# scm@linux.com
+
+# Copyright (C) 2015  Andrew Scott
+# a.clayton.scott@gmail.com
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see http://www.gnu.org/licenses/.
+
 import socket
 import optparse
 
@@ -17,7 +40,7 @@ print '[+] joined ' + chan
 ###---------------------------------------------------------
 ## keep a list of badwords to ding users for
 parser = optparse.OptionParser('usage: \n --help <show help> \n -l <bad word list>')
-parser.add_option('-p', dest='wl', type='string', help='.txt list of bad words')
+parser.add_option('-l', dest='wl', type='string', help='.txt list of bad words')
 (options, args) = parser.parse_args()
 wordlist_path = options.wl
 wordlist = []
@@ -26,8 +49,9 @@ if wordlist_path != None:
 	print '[+] bad word list found'
 	d = open(wordlist_path)
 	for line in d.readlines():
-		if line != "\n" or line != " ":
-			wordlist.append(line.translate(None, '\n'))
+		if (line != "\n" or line != " ") and type(line) == str:
+			line = str(line.replace("\n",""))
+			wordlist.append(line)
 else:
 	print '[!] no bad word list set'
 
